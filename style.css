@@ -56,7 +56,7 @@ header nav ul li a {
       color: rgb(255, 255, 255);
       text-decoration: none;
       font-weight: bold;
-      padding: 10px;
+      padding: 10px 20px;
       transition: .8s;
       position: relative;
     }
@@ -65,7 +65,7 @@ header nav ul li a:hover{
   transform: scale(1.2);
   color: rgb(225, 247, 241);
 }
-header nav ul li a:hover::before {
+/* header nav ul li a:hover::before {
   position: absolute;
   content: '';
   width: 95%;
@@ -73,7 +73,7 @@ header nav ul li a:hover::before {
   top: 5px;
   left: 0%;
   background-color: white;
-}
+} */
 
 
 /* finish with the nav bar   */
@@ -356,6 +356,23 @@ section {
     text-align: left;
     font-family: cursive;
 }
+#services h2 {
+  color: #01aac1;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+#services h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #01aac1;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+
 
 /* List Styling */
 .services-list {
@@ -390,12 +407,15 @@ section {
 
 /* Hover Icon Styling */
 .services-list li::before {
-  content: '✔';
+  content: '\f4be'; /* Unicode for the icon */
+  font-family: "Font Awesome 6 Free"; /* Set Font Awesome font */
+  font-weight: 900; /* Use solid weight for this icon */
   position: absolute;
   left: 10px;
   color: #01aac1;
   font-size: 1.5rem;
 }
+
 
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
@@ -791,4 +811,279 @@ cite {
   border: 0;
   border-radius: 10px;
 }
+.menu-button {
+  display: none;
+  /* background-color: blue; */
+  /* color: white; */
+  font-size: 18px;
+  padding: 30px 30px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+
+/* Contact Section */
+.contact-section {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-content h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+.contact-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-content input,
+.contact-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-content button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-content button:hover {
+  background-color: #0056b3;
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+
+  header .logo img {
+    width: 300px;
+    height: 100px;
+    margin-left: -20px;
+}
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  header nav ul li a {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 20px;
+  }
+
+  .hero .content {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .hero .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero .email img {
+    width: 30px;
+  }
+
+  /* Teeth Section */
+  div.teeth img {
+    width: 150px;
+    height: 150px;
+  }
+
+  div.teeth li {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  /* Services Section */
+  #services h2, #about h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr; /* Single column layout */
+    font-size: 1rem;
+  }
+
+  .services-list li {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+
+  /* Buttons */
+  .animated-button1 {
+    padding: 10px 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  /* Service Details */
+  .service-details {
+    padding: 10px;
+  }
+
+  .service-details img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .service-details p {
+    font-size: 1rem;
+  }
+
+  /* Footer or any other general section */
+  section {
+    padding: 10px;
+  }
+  header .menu-button{
+      display: none;
+  }
+
+}
+@media (max-width: 768px) {
+  header {
+    justify-content: center;
+    position: relative; /* Make the header position relative to place the menu */
+  }
+
+  header .logo img {
+    margin-left: 5px;
+    margin-right: 20px;
+    width: 230px;
+    height: 80px;
+  }
+
+  header .menu-button {
+    display: block;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Ensure it's above the menu */
+  }
+
+  header .nav-menu {
+    display: none; /* Menu is hidden by default */
+    position: absolute;
+    top: 100%; /* Position it directly below the menu button */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 5;
+  }
+
+  header .nav-menu.active {
+    display: block; /* Show the menu when active */
+  }
+
+  header nav ul {
+    list-style: none;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  header nav ul li {
+    border: 2px solid rgb(1, 170, 193);
+    padding: 10px;
+  }
+
+  /* Ensure the menu content is properly displayed */
+  header nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+  }
+.hero .content {
+  text-align: center;
+  padding: 20px 30px;
+  max-width: 250px;
+  margin: 30px auto;
+}
+.hero .book .listTeeth{
+flex-direction: column;
+}
+
+.services-list {
+  grid-template-columns: repeat(1,1fr);
+}
+#about {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.office-hours, .location {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-here {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-here .map, .contact-here .phone, .contact-here .mail {
+  text-align: center;
+}
+
+.contact-here img {
+  max-width: 50px;
+  margin: 10px 0;
+}
+
+}
+
+
+
 

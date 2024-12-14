@@ -41,3 +41,16 @@ document.querySelectorAll('.services-list li').forEach(item => {
     elements.forEach(element => observer.observe(element));
   });
   
+
+  function toggleMenu() {
+    var menu = document.getElementById('menu');
+    var buttonIcon = document.querySelector('.menu-button i');
+    menu.classList.toggle('active');
+    buttonIcon.classList.toggle('fa-bars');
+    buttonIcon.classList.toggle('fa-times'); // Change icon when menu is active
+  }
+  
+
+
+
+
